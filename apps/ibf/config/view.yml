@@ -1,0 +1,20 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type:  text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:    [ibf/layout.css, main.css, ../sfPropelPlugin/css/default.css, ../sfPropelPlugin/css/global.css, ui_lightness/jquery_ui_1.8.21.custom.css]
+
+  javascripts:    [library/jquery/jquery.js, library/tiny_mce/tiny_mce.js, library/jquery/jquery_1.7.2.min.js, library/jquery/jquery_ui_1.8.21.custom.min.js]
+
+  has_layout:     true
+  layout:         layout

@@ -1,0 +1,88 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Iglesia
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Iglesia
+    plural:                Iglesias
+    route_prefix:          iglesia
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        id:             { label: No. }
+        nombre_iglesia: { label: Nombre de la iglesia }
+        direccion:      { label: Dirección }
+        cp:             { label: Codigo Postal }
+        correo:         { label: Correo Electronico }
+        pagina:         { label: Sitio Web }
+      list:    
+        title: Directorio de Iglesias
+        display: [nombre_iglesia,=__nombre,direccion,colonia,cp,ciudad,estado,telefono,movil,correo,pagina,foto]
+        fields:  
+          __nombre:      { label: Nombre del Pastor }
+          telefono:       { label: Teléfono }
+          correo:         { label: Correo Electrónico }
+        max_per_page: 20
+        actions:
+          reporte:
+            label: Reporte General
+          _new:
+            label: Nueva Iglesia
+        batch_actions:
+          _delete:  
+             label: Borrar
+          _edit:  
+             label: Editar
+        object_actions: 
+          _edit:  
+             label: Editar
+          Imprimir:
+            label: Imprimir
+      filter: 
+        display: [nombre_iglesia,nombre_pastor, apaterno,direccion, ciudad, estado]
+        fields:  
+          apaterno:      { label: Apellido paterno }
+          amaterno:      { label: Apellido materno }
+      form:    
+        fields:  
+          nombre_iglesia: { label: Nombre de la iglesia }
+          nombre_pastor:  { label: Nombre (s) del Pastor }
+          cp:             { label: Codigo Postal }
+          correo:         { label: Correo Electronico }
+          pagina:         { label: Sitio Web }
+          apaterno:       { label: Apellido paterno }
+          amaterno:       { label: Apellido materno }
+          direccion:      { label: Dirección }
+          telefono:       { label: Teléfono }
+          movil:          { label: Móvil }
+          correo:         { label: Correo Electrónico}
+          nombrearchivo:  { label: Subir Fotografia}
+      edit:    
+        title: Editar  %%nombre_iglesia%%
+        fields:  
+          nombre_iglesia: { label: Iglesia }
+          nombre_pastor:  { label: Pastor }
+          correo:         { label: Correo Electronico }
+          pagina:         { label: Sitio Web }
+          cp:             { label: Codigo Postal }
+        actions:
+          _save:
+            label: Guardar
+          _delete:
+            label: Eliminar
+          _list:
+            label: Volver
+      new:
+        title: Capturar Nueva Iglesia
+        actions:
+          _save:
+            label: Guardar
+          _save_and_add:
+            label: Guardar y Agregar otro
+          _list:
+            label: Volver

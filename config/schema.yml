@@ -1,0 +1,84 @@
+propel:
+  ministerio:
+    id:            ~
+    name:          { type: varchar(255), required: true, index: unique }
+
+  casa:
+    id:            ~
+    ministerio:    { type: integer, foreignTable: ministerio, foreignReference: id, required: true, onDelete: CASCADE }
+    nombre:        { type: varchar(255), required: true }
+    apaterno:      { type: varchar(255), required: true }
+    amaterno:      { type: varchar(255) }
+    direccion:     { type: varchar(255), required: true }
+    colonia:       { type: varchar(255) }
+    cp:            { type: varchar(5)  }
+    ruta:          { type: varchar(10)  }
+    ciudad:        { type: varchar(255), required: true }
+    telcasa:       { type: varchar(10) }
+    telmovil:      { type: varchar(10) }
+    matrimonios:   { type: integer }
+    peques:        { type: integer }
+    jovenes:       { type: integer }
+    jovencitas:    { type: integer }
+    totalpersonas: { type: integer }
+    colchonetas:   { type: integer }
+    iglesia:       { type: integer }
+    zona:          { type: varchar(1), required: true}
+    coordenadas:   { type: varchar(255) }
+    asignado:      { type: boolean, required: true, default: 0 }
+    alternos:      { type: boolean, required: true, default: 0 }
+    observaciones: { type: varchar(255) }
+
+  miembro:
+    id:            ~
+    ministerio:    { type: integer, foreignTable: ministerio, foreignReference: id, required: true, onDelete: CASCADE }
+    nombre:        { type: varchar(255), required: true }
+    apaterno:      { type: varchar(255), required: true }
+    amaterno:      { type: varchar(255) }
+    sexo:          { type: varchar(10)  }
+    direccion:     { type: varchar(255), required: true }
+    entrecalles:   { type: varchar(255) }
+    colonia:       { type: varchar(255) }
+    cp:            { type: varchar(5)}
+    ciudad:        { type: varchar(255), required: true }
+    telcasa:       { type: varchar(10) }
+    telmovil:      { type: varchar(10) }
+    cumpleanios:   { type: date }
+    fechabautismo: { type: date }
+    correo:        { type: varchar(255) }
+    observaciones: { type: varchar(255) }
+
+  iglesia:
+    id:             ~
+    nombre_iglesia: { type: varchar(255), required: true }
+    nombre_pastor:  { type: varchar(255), required: true }
+    apaterno:       { type: varchar(255), required: true }
+    amaterno:       { type: varchar(255) }
+    direccion:      { type: varchar(255), required: true }
+    colonia:        { type: varchar(255) }
+    cp:             { type: varchar(5) }
+    ciudad:         { type: varchar(255), required: true }
+    estado:         { type: varchar(255), required: true }
+    pais:           { type: varchar(255), required: true }
+    telefono:       { type: varchar(12) }
+    movil:          { type: varchar(12) }
+    correo:         { type: varchar(255) }
+    pagina:         { type: varchar(255) }
+    nombrearchivo:  { type: varchar(255) }
+    foto:           { type: boolean, default: 0 }
+    observaciones:  { type: varchar(255) }
+
+  proveedor:
+    id:            ~
+    nombreempresa: { type: varchar(255), required: true }
+    giro:          { type: varchar(64)  }
+    direccion:     { type: varchar(255), required: true }
+    entrecalles:   { type: varchar(255) }
+    colonia:       { type: varchar(255) }
+    cp:            { type: varchar(5)}
+    ciudad:        { type: varchar(255), required: true }
+    tellocal:      { type: varchar(10) }
+    telmovil:      { type: varchar(10) }
+    idnextel:      { type: varchar(15) }
+    correo:        { type: varchar(255) }
+    observaciones: { type: varchar(255) }

@@ -1,0 +1,96 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Casa
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Casa
+    plural:                Casas
+    route_prefix:          casa
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        id:            { label: No. }
+        asignado:      { label: Asignado, help: Se ha asignado la casa?  }
+        alternos:      { label: Cambio, help: Puede ser cambiada por otros tipos de personas? }
+        nombre:        { label: Nombres (s), help: Sin apellidos  }
+        apaterno:      { label: A. paterno }
+        amaterno:      { label: A. materno }
+        direccion:     { label: Dirección }
+        cp:            { label: CP }
+        telcasa:       { label: Teléfono }
+        telmovil:      { label: Celular }
+        matrimonios:   { label: Mat.  }
+        peques:        { label: Niños }
+        jovencitas:    { label: Sritas }
+        jovenes:       { label: Jov }
+        totalpersonas: { label: Total }
+      list:    
+        title: Lista de Casas donde Hospedar
+        display: [id, =__Ministerio, =__nombre, direccion,colonia, zona, telcasa, telmovil ,matrimonios, peques, jovenes, jovencitas, iglesia, totalpersonas , alternos,  asignado, observaciones]
+        fields:  
+          __nombre:      { label: Nombre completo }
+          __Ministerio:  { label: Ministerio }
+        max_per_page: 20
+        actions:
+          reporte:
+            label: Reporte General
+          _new:
+            label: Nuevo hospedador
+        batch_actions:
+          _delete:  
+             label: Borrar
+          _edit:  
+             label: Editar
+        object_actions: 
+          _edit:  
+             label: Editar
+          Imprimir:
+            label: Imprimir
+          Asignar:  
+             label: Asignar
+      filter:  
+        display: [ nombre,colonia, matrimonios, peques, jovenes, jovencitas,iglesia, totalpersonas , asignado]
+        fields:  
+          nombre:      { label: Nombres (s) }
+          matrimonios: { label: Matrimonios  }
+          peques:      { label: Niños }
+          jovencitas:  { label: Señoritas }
+          jovenes:     { label: Jóvenes }
+      form:
+        fields:  
+          nombre:      { label: Nombres (s) }
+          apaterno:    { label: Apellido paterno }
+          amaterno:    { label: Apellido materno }
+          cp:          { label: Codigo Postal }
+          matrimonios: { label: Matrimonios  }
+          peques:      { label: Niños }
+          jovencitas:  { label: Señoritas }
+          jovenes:     { label: Jóvenes }
+      edit:    
+        title: Editar Casa de %%nombre%% %%apaterno%%
+        fields:  
+          nombre:      { label: Nombres (s) }
+          apaterno:    { label: Apellido paterno }
+          amaterno:    { label: Apellido materno }
+          cp:          { label: Código Postal }
+        actions:
+          _save:
+            label: Guardar
+          _delete:
+            label: Eliminar
+          _list:
+            label: Volver
+      new:
+        title: Capturar nuevo Hospedador
+        actions:
+          _save:
+            label: Guardar
+          _save_and_add:
+            label: Guardar y Agregar otro
+          _list:
+            label: Volver

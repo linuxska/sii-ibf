@@ -1,0 +1,120 @@
+sfGuardUser:
+  admin:
+    username:       abraham
+    password:       310389rima
+  pastor_user:
+    username:       alejandro
+    password:       alejandro
+  diacono_user:
+    username:       lucero
+    password:       lucero
+  secretaria_user1:
+    username:       laura
+    password:       laura
+  secretaria_user2:
+    username:       cintia
+    password:       cintia
+  hospedaje_user1:
+    username:       ruth
+    password:       aguilar
+  hospedaje_user2:
+    username:       joel
+    password:       fraire
+  hospedaje_user3:
+    username:       karen
+    password:       pacheco
+  hospedaje_user4:
+    username:       lupita
+    password:       buenavista
+  hospedaje_user5:
+    username:       blanqui
+    password:       rivera
+  hospedaje_user6:
+    username:       isma
+    password:       jiks
+
+sfGuardPermission:
+  admin_permiso:
+    name:              admin
+    description:       Permiso para administrar los usuarios de la Iglesia
+  pastor_permiso:
+    name:              pastor
+    description:       Permiso para ejecutar acciones de pastor de la Iglesia
+  diacono_permiso:
+    name:              diacono
+    description:       Permiso para ejecutar acciones diacono de la Iglesia
+  secretaria_permiso:
+    name:              secretaria
+    description:       Permiso para ejecutar acciones de secretaria de la Iglesia
+  hospedaje_permiso:
+    name:              hospedaje
+    description:       Permiso para CRUD del hospedaje de la Iglesia y de las Iglesias
+
+sfGuardGroup:
+  admin_grupo:
+    name:              admin
+    description:       Administrador de la Iglesia
+  pastor_grupo:
+    name:              Pastor
+    description:       Pastor de la Iglesia
+  diacono_grupo:
+    name:              Diacono
+    description:       Diacono de la Iglesia
+  secretaria_grupo:
+    name:              Secretaria
+    description:       Secretarias de la Iglesia
+  hospedaje_grupo:
+    name:              Hospedaje
+    description:       Hospedaje de la Iglesia
+
+sfGuardGroupPermission:
+  gp1:
+    group_id:       admin_grupo
+    permission_id:  admin_permiso
+  gp2:
+    group_id:       pastor_grupo
+    permission_id:  pastor_permiso
+  gp3:
+    group_id:       diacono_grupo
+    permission_id:  diacono_permiso
+  gp4:
+    group_id:       secretaria_grupo
+    permission_id:  secretaria_permiso
+  gp5:
+    group_id:       hospedaje_grupo
+    permission_id:  hospedaje_permiso
+
+sfGuardUserGroup:
+  ug1:
+    group_id:       admin_grupo
+    user_id:        admin
+  ug2:
+    group_id:       pastor_grupo
+    user_id:        pastor_user
+  ug3:
+    group_id:       diacono_grupo
+    user_id:        diacono_user
+  ug4:
+    group_id:       secretaria_grupo
+    user_id:        secretaria_user1
+  ug5:
+    group_id:       secretaria_grupo
+    user_id:        secretaria_user2
+  ug6:
+    group_id:       hospedaje_grupo
+    user_id:        hospedaje_user1
+  ug7:
+    group_id:       hospedaje_grupo
+    user_id:        hospedaje_user2
+  ug8:
+    group_id:       hospedaje_grupo
+    user_id:        hospedaje_user3 
+  ug9:
+    group_id:       hospedaje_grupo
+    user_id:        hospedaje_user4
+  ug10:
+    group_id:       hospedaje_grupo
+    user_id:        hospedaje_user5
+  ug11:
+    group_id:       hospedaje_grupo
+    user_id:        hospedaje_user6

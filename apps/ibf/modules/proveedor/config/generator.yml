@@ -1,0 +1,73 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Proveedor
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Proveedor
+    plural:                Proveedors
+    route_prefix:          proveedor
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Lista de Proveedores
+        display: [nombreempresa, giro, direccion, entrecalles,colonia, cp, ciudad, tellocal, telmovil, idnextel,correo, observaciones]
+        fields:
+          nombreempresa: { label: Nombre de la empresa }
+          entrecalles:   { label: Entre que calles esta? }
+          idnextel:      { label: ID de Nextel }
+          cp :           { label: Codigo Postal }
+          direccion:     { label: Dirección }
+          tellocal:      { label: Teléfono }
+          telmovil:      { label: Celular }
+          correo:        { label: Correo electrónico }
+        max_per_page: 20
+      actions:
+        _new:
+          label: Nuevo Proveedor
+      filter:
+        display: [ nombreempresa, colonia, giro, ciudad]
+        fields:
+          nombreempresa: { label: Nombre de la empresa }
+      form:
+        fields:
+           nombreempresa: { label: Nombre de la empresa }
+           entrecalles:   { label: Entre que calles esta? }
+           idnextel:      { label: ID de Nextel }
+           cp:            { label: Codigo Postal }
+           direccion:     { label: Dirección }
+           tellocal:      { label: Teléfono }
+           telmovil:      { label: Celular }
+           correo:        { label: Correo electrónico }
+      edit:
+        title: Editar información de %%nombreempresa%%
+        fields:
+          nombreempresa: { label: Nombre de la empresa }
+          entrecalles:   { label: Entre que calles esta? }
+          idnextel:      { label: ID de Nextel }
+          cp:            { label: Codigo Postal }
+          direccion:     { label: Dirección }
+          tellocal:      { label: Teléfono }
+          telmovil:      { label: Celular }
+          correo:        { label: Correo electrónico }
+        actions:
+          _save:
+            label: Guardar
+          _delete:
+            label: Eliminar
+          _list:
+            label: Volver
+      new:
+        title: Capturar Nuevo Proveedor
+        actions:
+          _save:
+            label: Guardar
+          _save_and_add:
+            label: Guardar y Agregar otro
+          _list:
+            label: Volver

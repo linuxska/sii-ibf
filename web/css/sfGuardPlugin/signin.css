@@ -1,0 +1,54 @@
+div#content{
+ width:90%;
+ margin-left:auto;
+ margin-right:auto;
+ min-height:600px;
+}
+div#text{
+ float:left;
+ overflow:hidden;
+ padding:10px;
+ width:60%;
+ border-right-color:#8f6a00;
+ border-right-style:dotted;
+ border-right-width:1px;
+ text-align:justify;
+ font-size: 14px;
+}
+div#text h2{
+    text-align:center;
+    text-transform:uppercase;
+    font-variant: small-caps;
+}
+div#text dt, div#text dd{
+    margin-bottom: 10px;
+}
+div#login{
+ float:right;
+ overflow:hidden;
+ padding:10px;
+ width:35%;
+}
+ul.error_list{
+ padding:0px;
+ margin:0px;
+ padding-left:5px;
+ list-style-type:none;
+}
+ul.error_list li{
+ display:inline;
+ font-size:x-small;
+ color:red;
+}
+table tbody td, table tbody th{
+    border:none;
+}
+div.loggin{
+ float:right;
+ overflow:hidden;
+ padding:80px;
+ width:75%;
+}
+div#login label{
+    text-align: right !important;
+}

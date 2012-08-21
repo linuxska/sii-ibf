@@ -1,0 +1,51 @@
+html, body{
+    margin:0px 0px 0px 0px !important;
+    padding:0px 0px 0px 0px !important;
+    background-color:white !important;
+}
+div#header{
+    text-align:center;
+    height:200px;
+    background-color:#5377b1;
+}
+div#header img{
+    width:1000px;
+    height:200px;
+}
+div#content{
+    min-height:500px;
+}
+div.rp_admin_footer{
+    clear:both;
+    text-align:center;    
+    padding-top:2px;
+    padding-bottom:2px;
+    font-size:0.75em;
+}
+div.rp_admin_footer p.rp_admin_ibf{
+    float:left;
+    width:50%;
+}
+div.rp_admin_footer p.rp_admin_dev{
+    float:right;
+    width:50%;
+}
+div.rp_admin_footer p.rp_admin_navbar{
+    clear:both;
+}
+div.rp_admin_footer a,
+div.rp_admin_footer a:hover,
+div.rp_admin_footer a:focus,
+div.rp_admin_footer a:visited,
+div.rp_admin_footer a:link{
+    color:inherit;
+    text-decoration:none;
+    border-bottom:1px white solid;
+}
+div#centro{
+    height: 400px;
+    margin-top: 30px;    
+    width: 600px;
+    margin-left: auto;    
+    margin-right: auto;
+}

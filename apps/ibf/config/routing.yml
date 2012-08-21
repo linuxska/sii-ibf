@@ -1,0 +1,106 @@
+proveedor:
+  class: sfPropelRouteCollection
+  options:
+    model:                Proveedor
+    module:               proveedor
+    prefix_path:          /proveedor
+    column:               id
+    with_wildcard_routes: true
+
+iglesia:
+  class: sfPropelRouteCollection
+  options:
+    model:                Iglesia
+    module:               iglesia
+    prefix_path:          /iglesia
+    column:               id
+    with_wildcard_routes: true
+
+miembro:
+  class: sfPropelRouteCollection
+  options:
+    model:                Miembro
+    module:               miembro
+    prefix_path:          /miembro
+    column:               id
+    with_wildcard_routes: true
+
+casa:
+  class: sfPropelRouteCollection
+  options:
+    model:                Casa
+    module:               casa
+    prefix_path:          /casa
+    column:               id
+    with_wildcard_routes: true
+
+ministerio:
+  class: sfPropelRouteCollection
+  options:
+    model:                Ministerio
+    module:               ministerio
+    prefix_path:          /ministerio
+    column:               id
+    with_wildcard_routes: true
+
+casa_reporte:
+  url:              /casa/reporte/
+  requirements:
+    sf_method:      [get]
+  param:            { module: casa, action: Reporte }
+
+miembro_cumple:
+  url:              /miembro/cumple/
+  requirements:
+    sf_method:      [get]
+  param:            { module: miembro, action: Cumple }
+
+
+homepage:
+  url:   /
+  param: { module: ibf, action: index }
+
+legal:
+  url:   /
+  param: { module: ibf, action: index }
+
+about:
+  url:   /
+  param: { module: ibf, action: index }
+
+download_manual:
+  url:   /download/manual.:sf_format
+  param: { module: ibf, action: DownloadManual, sf_format: pdf}
+
+
+change_password:
+  url:              /changepassword
+  param:            { module: ibf, action: ChangePasswordShow }
+change_password_do:
+  url:              /dochangepassword
+  param:            { module: ibf, action: ChangePassword }
+
+recover_password:
+  url:              /recoverpassword
+  param:            { module: ibf, action: RecoverPasswordShow }
+recover_password_do:
+  url:              /dorecoverpassword
+  param:            { module: ibf, action: RecoverPassword }
+
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+# default rules
+

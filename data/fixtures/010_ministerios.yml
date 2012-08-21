@@ -1,0 +1,34 @@
+Ministerio:
+  ruta1:         { name: Ruta 1 }
+  ruta2:         { name: Ruta 2 }
+  ruta3:         { name: Ruta 3 }
+  ruta4:         { name: Ruta 4 }
+  ruta5:         { name: Ruta 5 }
+  ruta6:         { name: Ruta 6 }
+  ruta7:         { name: Ruta 7 }
+  ruta8:         { name: Ruta 8 }
+  ruta9:         { name: Ruta 9 }
+  ruta10:        { name: Ruta 10 }
+  ruta11:        { name: Ruta 11 }
+  ruta12:        { name: Ruta 12 }
+  ruta13:        { name: Ruta 13 }
+  ruta14:        { name: Ruta 14 }
+  ruta15:        { name: Ruta 15 }
+  ruta16:        { name: Ruta 16 }
+  ruta17:        { name: Ruta 17 }
+  ruta18:        { name: Ruta 18 }
+  ruta19:        { name: Ruta 19 }
+  ruta20:        { name: Ruta 20 }
+  laico:         { name: Laico }
+  adiccion:      { name: Adicciones }
+  colegio:       { name: Colegio  Dr Mora }
+  corogeneral:   { name: Coro General }
+  coroinfantil:  { name: Coro Infantil }
+  instituto:     { name: Instituto Bautista }
+  pescadores:    { name: Pescadores }
+  sembradoras:   { name: Sembradoras }
+  rondallahoreb: { name: Rondalla Horeb }
+  rondallabethel: { name: Rondalla Bethel }
+  vencedores:    { name: Vencedores }
+  cultogeneral:  { name: Culto General }
+  ujieres:       { name: Ujieres }

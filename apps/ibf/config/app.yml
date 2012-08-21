@@ -1,0 +1,22 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+#all:
+all:
+
+ sf_guard_plugin:
+  signin_form:                  sfGuardLoginForm
+  remember_cookie_name:         mx-itc-dgtyv-ci-me
+  remember_key_expiration_age:  86400 # 1 day
+  success_signout_url:          '@homepage'
+
+ sf_guard_extra_plugin:
+        mail_from:        contacto@ibfcelaya.org.mx
+        name_from:        Pastor Alejandro Cordova Karan
+        subject_confirm:  Confirmación de registro
+        subject_complete: Petición completa
+        subject_request:  Petición de reestablecimiento de contraseña
+        subject_success:  Contraseña reestablecida satisfactorimente
+        admin_mail_from:  contacto@ibfcelaya.org.mx
+        admin_name_from:  Abraham Rafael Rico Moreno

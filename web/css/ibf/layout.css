@@ -1,0 +1,76 @@
+div#content div#workspace{
+ float:right;
+ overflow:auto;
+ width:80%;
+ text-align:justify;
+ padding: 10px;
+ min-height:800px;
+}
+tr.ci_admin_row_full, tr.ci_admin_row_full a{
+ color:red !important;
+ font-style:italic !important;
+}
+tr.ci_admin_row_prorroga, tr.ci_admin_row_prorroga a{
+ color:#ff8000 !important;
+ font-style:italic !important;
+}
+div.ci_admin_content{
+ margin:10px 10px 10px 10px;
+}
+div#content div#menu{
+ float:left;
+ overflow:hidden;
+ width:196px;
+ font-size:small;
+}
+div#menu ul{
+ list-style:none;
+ margin:0px 0px 0px 0px;
+ padding:0px 0px 0px 0px;
+}
+div#menu li.menu_header, div#menu ul.menu_list li.app{
+ font-variant:small-caps;
+ cursor:pointer;
+}
+div#menu li.menu_header{
+ background-image: url(/images/logos/header_menu.png);
+ text-align:center;
+ color:white;
+ font-weight: bold;
+}
+div#menu li.menu_sub_header{
+ font-style:italic;
+ text-align:center;
+ background-image: url(/images/logos/header_menu.png);
+ color:white;
+ font-weight: bold;
+}
+div#menu ul.menu_list li.last {
+    border-bottom:2px #17608a solid;
+    margin-bottom:10px;
+}
+div#menu ul li ul li.app, div#menu ul li.app{
+ padding-left:10px;
+ border-left:2px #17608a solid;
+ border-right:2px #17608a solid;
+}
+div#menu ul.menu_list li.app{
+ padding-top:5px;
+ padding-bottom:5px;
+}
+div#menu ul.menu_list li.app:hover{
+ background-color:#e8e8e3;
+}
+div#menu a, div#menu a:visited{
+ color:inherit;
+ text-decoration:none;
+}
+div#menu span.username{
+ font-size:x-small;
+}
+div#menu ul.menu_list li.selected{
+ background-color:#e8e8e3;
+}
+div#menu a{
+ display:block;
+}

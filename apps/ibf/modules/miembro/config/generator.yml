@@ -1,0 +1,87 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Miembro
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Miembro
+    plural:                Miembros
+    route_prefix:          miembro
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        id:            { label: No. }
+        nombre:        { label: Nombres (s) }
+        apaterno:      { label: A. paterno }
+        amaterno:      { label: A. materno }
+        direccion:     { label: Dirección }
+        cp:            { label: CP }
+        telcasa:       { label: Teléfono }
+        telmovil:      { label: Celular }
+        cumpleanios:    { label: Cumpleaños }
+      list:    
+        title: Lista de Miembros
+        display: [id, =__Ministerio, =__nombre, sexo, direccion,colonia, cp, ciudad, telcasa, telmovil, cumpleanios]
+        fields:  
+          __nombre:      { label: Nombre completo }
+          __Ministerio:  { label: Ministerio }
+          cumpleanios:   { label: Fecha Nacimiento }
+        max_per_page: 20
+        batch_actions:
+          _delete:  
+             label: Borrar
+          _edit:  
+             label: Editar
+        object_actions: 
+          _delete:  
+             label: Borrar
+          _edit:  
+             label: Editar
+          Imprimir:
+            label: Imprimir
+        actions:
+          _new:
+            label: Nuevo Miembro
+          cumple:
+            label: Cumpleaños del Mes
+      filter:  
+        display: [ ministerio,nombre,apaterno, amaterno,direccion, colonia ]
+        fields: 
+          apaterno:    { label: Apellido paterno }
+          amaterno:    { label: Apellido materno }
+          cp:          { label: Codigo Postal }
+      form:
+        fields:  
+          nombre:      { label: Nombres (s) }
+          apaterno:    { label: Apellido paterno }
+          amaterno:    { label: Apellido materno }
+          cp:          { label: Codigo Postal }
+          cumpleanios:    { label: Fecha Nacimiento }
+          fechabautismo:  { label: Fecha de Bautismo }
+      edit:    
+        title: Editar informacion de %%nombre%% %%apaterno%%
+        fields:  
+          nombre:      { label: Nombres (s) }
+          apaterno:    { label: Apellido paterno }
+          amaterno:    { label: Apellido materno }
+          cp:          { label: Codigo Postal }
+        actions:
+          _save:
+            label: Guardar
+          _delete:
+            label: Eliminar
+          _list:
+            label: Volver
+      new:
+        title: Capturar Nueva Casa
+        actions:
+          _save:
+            label: Guardar
+          _save_and_add:
+            label: Guardar y Agregar otro
+          _list:
+            label: Volver

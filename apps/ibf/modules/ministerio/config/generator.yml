@@ -1,0 +1,44 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Ministerio
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Ministerio
+    plural:                Ministerios
+    route_prefix:          ministerio
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        title: Lista de Ministerios
+        display: [id, name]
+        fields:  
+          name:  { label: Ministerio }
+          id:  { label: Numero }
+        max_per_page: 10
+        batch_actions: {}
+        object_actions: {}
+        actions:
+          _new:
+            label: Nuevo Ministerio
+      filter:  
+        fields:  
+          name:  { label: Ministerio }
+      form:    
+        fields:  
+          name:  { label: Ministerio }
+      edit:    ~
+      new:
+        title: Capturar Nuevo Ministerio
+        actions:
+          _save:
+            label: Guardar
+          _save_and_add:
+            label: Guardar y Agregar otro
+          _list:
+            label: Volver
